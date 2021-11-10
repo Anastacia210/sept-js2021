@@ -176,3 +176,12 @@ trust = 123 === '123';
 console.log(trust);
 trust = 123 =='123';
 console.log(trust);
+
+// - Подумайте Какие значения выведет в окно браузера следующий фрагмент кода?  и почему?
+let str = "20";
+let x = 5;
+document.write(str + x + "<br/>"); //205
+document.write(str - x + "<br/>"); //15
+document.write(str * "2" + "<br/>"); //40
+document.write(str / 2 + "<br/>"); //10
+// при взаимодействии любого значения со стринговым все значения приводятся к стринговым
