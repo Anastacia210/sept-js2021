@@ -17,21 +17,21 @@ let book = {
     title: 'Шаг за грань',
     pages: 416,
     genre: 'мистика'
-}
+};
 // 3. Створити об'єкт book з наступними полями  - назва, кількість сторінок, жанр, автори
 let book2 = {
     title: 'Грани реальности',
     pages: 461,
     genre: 'мистика',
     author: 'В.Пояков'
-}
+};
 // 4. Створити маcив об'єктів book з наступними полями  - назва, кількість сторінок, жанр, автори.
 let books = [
     {id: 1, title: 'Шаг за грань', pages: 416, genre: 'мистика', author: 'В.Пояков'},
     {id: 2, title: 'Грани реальности', pages: 461, genre: 'мистика', author: 'В.Пояков'},
     {id: 3, title: 'Грозовой перевал', pages: 384, genre: 'роман', author: 'Э. Бронте'},
-    {id: 4, title: 'Отверженные', pages: 704, genre: 'роман', author: 'В.Гюго'},
-]
+    {id: 4, title: 'Отверженные', pages: 704, genre: 'роман', author: 'В.Гюго'}
+];
 // Вивести кожну книгу як окремий об'єкт
 console.log(books[0]);
 console.log(books[1]);
@@ -39,37 +39,52 @@ console.log(books[2]);
 console.log(books[3]);
 // 5. Напишіть код, який вираховує площу прямокутника висотою 23см. (змінна height) та шириною 10см (змінна width).
 // Значення площі зберігати в змінній s.
-let height = 23
-let width = 10
+let height = 23;
+let width = 10;
 
 function calculateRectangleArea(x, y) {
     return x * y
 }
 
-let s = calculateRectangleArea(height, width)
-console.log(s)
+let s = calculateRectangleArea(height, width);
+console.log(s);
 
 // 6. Напиши код, який знаходить об'єм циліндра заввишки 10м (змінна heightC) та діаметром основи 4м (dC),
 // результат помістіть у змінну v.
-let heightC = 10
-let dC = 4
+let heightC = 10;
+let dC = 4;
 
 function calculateCylinderVolume(h, R) {
     return Math.PI * 2 ** 2 * 10
 }
 
-let v = calculateCylinderVolume(heightC, dC)
-console.log(v)
+let v = calculateCylinderVolume(heightC, dC);
+console.log(v);
 
 // 7. У прямокутного трикутника дві сторони n (зі значенням 3) та m (зі значенням 4).
 // Знайдіть гіпотенузу k за теоремою Піфагора (потрібно використовувати функцію Math.pow (число, ступінь)
 // або оператор зведення в ступінь **).
-let n1 = 3
-let m = 4
+let n1 = 3;
+let m = 4;
 
 function calculate(k1, k2) {
     return Math.sqrt(k1 ** 2 + k2 ** 2)
 }
 
-let k = calculate(n1, m)
-console.log(k)
+let k = calculate(n1, m);
+console.log(k);
+// -______________________________task with error________________________________________________-
+let a = 100;
+let b = 500;
+let c = "hello";
+let d = "okten";
+let x = 'constant value';
+{
+    console.log(a);
+    x = 'new value';
+}
+b = 'new value';
+
+let result = a + b;
+
+console.log(result);
