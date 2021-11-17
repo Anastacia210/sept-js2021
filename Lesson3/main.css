@@ -1,0 +1,30 @@
+.simp {
+    display: flex;
+    margin: 10px;
+}
+img {
+    width: 200px;
+    height: 200px;
+    border: 1px solid blue;
+    border-radius: 10%;
+}
+.about {
+    background: navajowhite;
+    justify-content: space-evenly;
+    box-sizing: border-box;
+    text-align: justify;
+}
+.text {
+    background-color: darkblue;
+    color: bisque;
+    width: 200px;
+
+}
+.title {
+    background-color: yellowgreen;
+    margin: 5px;
+}
+.prod {
+    display: flex;
+    justify-content: space-evenly;
+}
