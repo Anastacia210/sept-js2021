@@ -2,6 +2,7 @@
 function rectangle(a, b) {
     return a * b;
 }
+
 let res = rectangle(5, 10);
 console.log(res);
 
@@ -9,6 +10,7 @@ console.log(res);
 function circle(r) {
     return Math.PI * (r * r);
 }
+
 let res1 = circle(7);
 console.log(res1);
 
@@ -16,22 +18,25 @@ console.log(res1);
 function cyl(r, h) {
     return 2 * Math.PI * r * (r + h);
 }
+
 let res2 = cyl(5, 11);
 console.log(res2);
 
 // - створити функцію яка приймає масив та виводить кожен його елемент
-let array = ['qwe','asd','zxc'];
+let array = ['qwe', 'asd', 'zxc'];
 let funArr = arr => {
-     console.log(arr);
-     for (const arrElement of arr) {
-         console.log(arrElement);
-     }
- };
- funArr(array)
+    console.log(arr);
+    for (const arrElement of arr) {
+        console.log(arrElement);
+    }
+};
+funArr(array)
+
 // - створити функцію яка створює параграф з текстом. Текст задати через аргумент
 function createP(msg) {
     document.write(`<p>${msg}</p>`);
 }
+
 createP('Hello OKTEN');
 
 // - створити функцію яка створює ul з трьома елементами li. Текст li задати через аргумент всім однаковий
@@ -42,6 +47,7 @@ function createUl(list) {
             <li>${list}</li>
         </ul>`);
 }
+
 createUl('Success doesn`t come to you...you go to it');
 
 // - створити функцію яка створює ul з трьома елементами li. Текст li задати через аргумент всім однаковий.
@@ -54,25 +60,42 @@ function writer(msg, sym) {
     }
     document.write('</ul>');
 }
+
 writer('Success doesn`t come to you...you go to it', 5);
 
 // - створити функцію яка приймає масив примітивних елементів (числа,стрінги,булеві), та будує для них список
-const items = ['JS', 123, true, 'html', 345];
 
-document.write('<ul>');
-for (const item of items) {
-    document.write(`<li>${item}</li>`);
-};
-document.write('</ul>');
+// const items = ['JS', 123, true, 'html', 345];
+//
+// document.write('<ul>');
+// for (const item of items) {
+//     document.write(`<li>${item}</li>`);
+// };
+// document.write('</ul>');
+
+// _____________________________________FIX_______________________________________________
+function listIt(list) {
+    for (const item of list) {
+        document.write(`<li>${item}</li>`)
+    }
+}
+
+listIt(['JS', 123, true, 'html', 345]);
 
 // - створити функцію яка приймає масив об'єктів з наступними полями id,name,age , та виводить їх в документ.
 // Для кожного об'єкту окремий блок.
-const users = [
-    {id: 1, name: 'Max', age: 38},
-    {id: 2, name: 'Meggan', age: 45},
-    {id: 3, name: 'Jack', age: 35},
-    {id: 4, name: 'Kate', age: 37}
-];
-for (const user of users) {
-    document.write(`<div>${user.id}-${user.name}-${user.age}</div>`)
+
+function userList(arr){
+    for (const item of arr) {
+        document.write(`<div>${item.id}-${item.name}-${item.age}</div>`)
+    }
 };
+ userList([
+     {id: 1, name: 'Max', age: 38},
+     {id: 2, name: 'Meggan', age: 45},
+     {id: 3, name: 'Jack', age: 35},
+     {id: 4, name: 'Kate', age: 37}
+ ]);
+
+
+
