@@ -7,14 +7,14 @@ divEl.style.height = '200px';
 
 const delBtn = document.getElementById('del');
 delBtn.onclick = function () {
-    divEl.style.display = 'none'
-}
+    divEl.style.display = 'none';
+};
 
 // - Создайте кнопку, при клике на которую, она будет скрывать сама себя.
 const btn = document.getElementById('btn');
 btn.onclick = function () {
-    btn.style.display = 'none'
-}
+    btn.style.display = 'none';
+};
 
 // - створити інпут який приймає вік людини та кнопку яка підтверджує дію.
 // При натисканні на кнопку зчитати інформацію з інпуту та перевірити вік чи меньше він ніж 18,
@@ -23,7 +23,7 @@ const age = document.forms.age;
 age.onsubmit = function (ev) {
     ev.preventDefault();
     if (+this.usAge.value < 18) {
-        alert('Underage!')
+        alert('Underage!');
     }
 };
 
@@ -31,7 +31,7 @@ age.onsubmit = function (ev) {
 const list = document.getElementsByClassName('list')[0];
 list.onclick = function () {
     for (const child of this.children) {
-        child.classList.toggle('hidden')
+        child.classList.toggle('hidden');
     }
 };
 
