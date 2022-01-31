@@ -1,5 +1,6 @@
 // 1.
-// Отримати відповідь з цього ресурсу відповідь, та вивести в документ об'єкти. Застилізувати, за допомоги css, щоб отримати 5 елементів в рядку.
+// Отримати відповідь з цього ресурсу відповідь, та вивести в документ об'єкти. Застилізувати, за допомоги css,
+// щоб отримати 5 елементів в рядку.
 // Для кожного елементу свій блок div.post
 // Всі характеристики повинні мати свої блоки всередені div.post
 // https://jsonplaceholder.typicode.com/posts
@@ -11,6 +12,8 @@ fetch('https://jsonplaceholder.typicode.com/posts')
         for (const post of posts){
             let pBox = document.createElement('p');
             pBox.innerText = `${post.id} - ${post.body}`
+            pBox.style.width = '400px';
+            pBox.style.border = '2px solid blue';
             postsBox.append(pBox)
         }
     });
@@ -28,6 +31,8 @@ fetch('https://jsonplaceholder.typicode.com/comments')
         for (const comment of comments){
             let cBox = document.createElement('p');
             cBox.innerText = `${comment.id} - ${comment.body}`
+            cBox.style.width = '500px';
+            cBox.style.border = '2px solid green';
             comBox.append(cBox)
         }
     });

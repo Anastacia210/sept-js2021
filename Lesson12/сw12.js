@@ -6,25 +6,33 @@
 fetch('https://jsonplaceholder.typicode.com/posts')
     .then(response => response.json())
     .then(users => {
+
         let usersComment = document.getElementsByClassName('comments-box')[0];
         for (const user of users) {
             let comUser = document.createElement('p');
             comUser.innerText = `${user.id} - ${user.body}`;
+            comUser.style.border = '2px solid blue';
+            comUser.style.width = '600px';
             let detailsBtn = document.createElement('button');
             detailsBtn.innerText = 'comment';
             detailsBtn.onclick = function () {
+
                 fetch(`https://jsonplaceholder.typicode.com/posts/${user.id}/comments`)
                     .then(response => response.json())
                     .then(comments => {
+
                         let comBox = document.getElementsByClassName('comments')[0];
-                        comBox.innerHTML = '';
+                        // comBox.innerHTML = '';
                         for (const comment of comments) {
                             let comMent = document.createElement('li');
                             comMent.innerText = comment.body;
+                            comMent.style.border = '1px solid pink';
                             comBox.append(comMent);
+                            comUser.appendChild(comMent);
+
                         }
                     });
-            };
+            }
             comUser.appendChild(detailsBtn);
             usersComment.appendChild(comUser);
         }
